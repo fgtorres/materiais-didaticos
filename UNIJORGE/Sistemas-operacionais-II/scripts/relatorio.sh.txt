@@ -1,0 +1,53 @@
+#!/bin/bash
+
+echo "********** RELATORIO DO COMPUTADOR"
+echo "Quantidade de memoria:"
+free -m
+
+echo "*************************************"
+echo "Quantidade de cores de processamento:"
+cat /proc/cpuinfo | grep cpu
+echo "*************************************"
+
+echo "Distribuição Linux:"
+lsb_release -a
+echo "*************************************"
+
+echo "Versão do kernel:"
+uname -r
+echo "*************************************"
+
+echo "Tamanho do Disco Rígido:"
+df -h
+echo "*************************************"
+
+echo "Usuários desse computador:"
+cat /etc/passwd
+echo "*************************************"
+
+echo "Tamanho do diretorio de log:"
+du -hs /var/log
+echo "*************************************"
+
+echo "Uptime e load average:"
+uptime
+echo "*************************************"
+
+echo "Nome do servidor:"
+hostname -l
+echo "*************************************"
+
+echo "Endereço de IP:"
+ifconfig
+echo "*************************************"
+
+echo "Gateway padrao:"
+route -n
+echo "*************************************"
+
+echo "Servidores de DNS:"
+cat /etc/resolv.conf
+
+echo "Serviços disponíveis:"
+service --status-all
+

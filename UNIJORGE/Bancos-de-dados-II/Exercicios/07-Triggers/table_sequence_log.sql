@@ -1,0 +1,17 @@
+﻿-- CREATE TABLE
+CREATE TABLE log (
+    codlog INT NOT NULL PRIMARY KEY,
+    data_hora TIMESTAMP,
+    operacao VARCHAR(1),
+    tabela TEXT,
+    valor TEXT
+);
+
+CREATE SEQUENCE seq_log
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 1000
+  CACHE 1;
+ALTER TABLE seq_log
+  OWNER TO postgres;
